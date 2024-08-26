@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홈 화면</title>
+
+    <style>
+        div {
+            border: 1px solid black;
+        }
+
+        .container {
+            margin: auto;
+            width: 1400px;
+        }
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu {
+            display: flex;
+            font-size: 30px;
+            padding: 10px;
+        }
+
+        .menu div {
+            margin-left: 10px;
+        }
+
+        .mid {
+            display: flex;
+        }
+
+        .img-box {
+            position: relative;
+            width: 60%;
+            cursor: pointer;
+        }
+
+        .img-box img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .word-box {
+            width: 40%;
+        }
+
+        .bottom {
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="top">
+            <div class="menu-box">
+                <div class="menu">
+                    <div>아무거나</div>
+                    <div>아무거나</div>
+                    <div>아무거나</div>
+                    <div>아무거나</div>
+                    <div>아무거나</div>
+                </div>
+            </div>
+
+            <div>
+                <div class="search-bar">
+                    <input class="search" type="search" id="">
+                    <button>검색</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="mid">
+            <div class="img-box">
+                <img id="imgBtn"
+                    src="https://mblogthumb-phinf.pstatic.net/MjAxODExMjdfNiAg/MDAxNTQzMzE4Njg0MjY2.BjKgetsIWMGL7ZlHkpDeScQ0SJ58xcSt7YSAKRlG7p0g.zm3bKPoqlpYwGfjlyLwK2PZxPfLscMUWk8PUCVwMls4g.PNG.hamiyatoon/%EC%84%B8%EA%B3%84%EC%A7%80%EB%8F%84.png?type=w800"alt="">
+            </div>
+
+            <div class="word-box">
+                v_cont += data['dang_map_download_url'];
+            </div>
+        </div>
+
+        <div class="bottom">
+
+        </div>
+
+
+
+        <script>
+            document.getElementById("imgBtn").addEventListener("click", () => {
+                open("./01_나라이름.html", "country", "width=370,height=450,left=500,top=200");
+            });
+
+            
+        </script>
+
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>

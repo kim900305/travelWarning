@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나라이름</title>
+
+    <style>
+        .print {
+            width: 350px;
+            height: 400px;
+            border: 2px solid black;
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input id="inputCountry">
+    <button id="searchBtn">검색</button>
+    <button>확인</button>
+    <button id="resetBtn">초기화</button>
+
+    <div class="print" id="printData"></div>
+
+
+
+
+
+    <script>
+        let v_country = JSON.parse(localStorage.getItem("country"));
+        console.log(v_country);
+        console.log(v_country["data"]);
+        console.log(v_country["data"][0]["continent_nm"]);
+
+        let v_print = document.getElementById('printData');
+        console.log(v_print);
+
+        let v_array = [];
+        for (let data of v_country['data']) {
+            console.log(data['country_nm']);
+
+            let v_cont = "<p>";
+            v_cont += data['country_nm'];
+            v_cont += "</p>";
+
+            v_print.innerHTML += v_cont;
+        }
+
+
+
+        document.getElementById("searchBtn").addEventListener("click", () => {
+            let v_inputCountry = document.getElementById("inputCountry").value;
+
+            console.log(v_inputCountry);
+
+            v_print.innerHTML = "";
+
+            for (let data of v_country['data']) {
+                if (data["country_nm"].includes(v_inputCountry)) {
+                    let v_cont = "<p>";
+                    v_cont += data['country_nm'];
+                    v_cont += "</p>";
+
+                    v_print.innerHTML += v_cont;
+                }
+            }
+        });
+
+        
+    </script>
+
+</body>
+
+</html>
